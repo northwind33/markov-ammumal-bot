@@ -25,6 +25,7 @@ func (m *Misskey) SendNote(content string, vrange ViewRange) {
 		Content:    content,
 		ShareRange: vrange,
 		LocalOnly:  false,
+		DoNotMention: true,
 
 		Token: m.token,
 	}
@@ -59,6 +60,7 @@ func (m *Misskey) SendReply(replyid string, content string, vrange ViewRange) {
 
 		Content:    content,
 		ShareRange: vrange,
+		DoNotMention: true,
 
 		Token: m.token,
 	}
