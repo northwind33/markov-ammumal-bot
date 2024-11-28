@@ -8,9 +8,10 @@ const PRIVATE ViewRange = "followers"
 const DIRECT ViewRange = "specified"
 
 type MkNote struct {
-	Token   string  `json:"i"`
-	Content string  `json:"text"`
-	CW      *string `json:"cw"`
+	Token        string  `json:"i"`
+	Content      string  `json:"text"`
+	CW           *string `json:"cw"`
+	DoNotMention bool    `json:"noExtractMentions"`
 
 	ReplyID *string `json:"replyId"`
 
